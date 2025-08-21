@@ -1,0 +1,185 @@
+/* Custom animations and styles */
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition-property: transform, box-shadow, background-color, border-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+/* Custom button hover effects */
+.shop-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(245, 166, 35, 0.3);
+}
+
+.add-to-cart-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(245, 166, 35, 0.25);
+}
+
+/* Product card hover effects */
+.product-card {
+    transform-origin: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Modal animations */
+.modal {
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Input focus effects */
+input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.1);
+}
+
+/* Loading animation for buttons */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cart count animation */
+#cartCount {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Gradient text effect for hero */
+.text-gradient {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fbbf24;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .product-card:hover {
+        transform: none;
+    }
+    
+    .shop-now-btn:hover {
+        transform: none;
+    }
+    
+    .add-to-cart-btn:hover {
+        transform: none;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus indicators for keyboard navigation */
+button:focus,
+input:focus,
+a:focus {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+}
+
+/* Error state styling */
+.border-red-500 {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Success notification styling */
+.notification-enter {
+    transform: translateX(100%);
+}
+
+.notification-enter-active {
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.notification-exit {
+    transform: translateX(0);
+}
+
+.notification-exit-active {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+}
+
+/* Loading state for forms */
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Image optimization */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Print styles */
+@media print {
+    .modal,
+    nav,
+    footer {
+        display: none !important;
+    }
+}

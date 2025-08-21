@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rings - Gold Shop</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+    
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': {
+                            50: '#fffdf7',
+                            100: '#fffaeb',
+                            200: '#fff3d1',
+                            300: '#ffe9a6',
+                            400: '#ffd970',
+                            500: '#ffc532',
+                            600: '#f5a623',
+                            700: '#d4851a',
+                            800: '#b8671a',
+                            900: '#975218',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <i class="fas fa-gem text-gold-500 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">Gold Shop</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-gold-600 transition-colors duration-200">Home</a>
+                    <a href="necklaces.html" class="text-gray-700 hover:text-gold-600 transition-colors duration-200">Necklaces</a>
+                    <a href="rings.html" class="text-gold-600 font-semibold transition-colors duration-200">Rings</a>
+                    <a href="bracelets.html" class="text-gray-700 hover:text-gold-600 transition-colors duration-200">Bracelets</a>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex items-center space-x-4">
+                    <button id="cartBtn" class="relative p-2 text-gray-700 hover:text-gold-600 transition-all duration-200 hover:scale-110">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-gold-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+                    <button id="loginBtn" class="bg-gold-500 text-white px-4 py-2 rounded-lg hover:bg-gold-600 transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                        Login
+                    </button>
+                    <button id="registerBtn" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                        Register
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-gold-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden bg-white border-t border-gray-200 hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-gold-600">Home</a>
+                <a href="necklaces.html" class="block px-3 py-2 text-gray-700 hover:text-gold-600">Necklaces</a>
+                <a href="rings.html" class="block px-3 py-2 text-gold-600 font-semibold">Rings</a>
+                <a href="bracelets.html" class="block px-3 py-2 text-gray-700 hover:text-gold-600">Bracelets</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-gold-100 to-gold-200 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Gold Rings</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Discover our stunning collection of handcrafted gold rings</p>
+        </div>
+    </section>
+    
+    <!-- Rings Grid -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Ring 1 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Classic Gold Wedding Ring" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Classic Gold Wedding Ring</h3>
+                        <p class="text-2xl font-bold text-gold-600 mb-4">$199.99</p>
+                        <button class="add-to-cart-btn w-full bg-gold-500 text-white py-3 rounded-lg hover:bg-gold-600 transition-all duration-200 hover:scale-105 hover:shadow-lg" data-product-id="5">
+                            <i class="fas fa-cart-plus mr-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Ring 2 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Elegant Gold Diamond Ring" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Elegant Gold Diamond Ring</h3>
+                        <p class="text-2xl font-bold text-gold-600 mb-4">$899.99</p>
+                        <button class="add-to-cart-btn w-full bg-gold-500 text-white py-3 rounded-lg hover:bg-gold-600 transition-all duration-200 hover:scale-105 hover:shadow-lg" data-product-id="6">
+                            <i class="fas fa-cart-plus mr-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Ring 3 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vintage Gold Ring" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Vintage Gold Ring</h3>
+                        <p class="text-2xl font-bold text-gold-600 mb-4">$349.99</p>
+                        <button class="add-to-cart-btn w-full bg-gold-500 text-white py-3 rounded-lg hover:bg-gold-600 transition-all duration-200 hover:scale-105 hover:shadow-lg" data-product-id="7">
+                            <i class="fas fa-cart-plus mr-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Ring 4 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544376664-80b17f09d399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHhwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Modern Gold Band Ring" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Modern Gold Band Ring</h3>
+                        <p class="text-2xl font-bold text-gold-600 mb-4">$279.99</p>
+                        <button class="add-to-cart-btn w-full bg-gold-500 text-white py-3 rounded-lg hover:bg-gold-600 transition-all duration-200 hover:scale-105 hover:shadow-lg" data-product-id="8">
+                            <i class="fas fa-cart-plus mr-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Ring 5 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Gold Signet Ring" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Gold Signet Ring</h3>
+                        <p class="text-2xl font-bold text-gold-600 mb-4">$459.99</p>
+                        <button class="add-to-cart-btn w-full bg-gold-500 text-white py-3 rounded-lg hover:bg-gold-600 transition-all duration-200 hover:scale-105 hover:shadow-lg" data-product-id="15">
+                            <i class="fas fa-cart-plus mr-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Ring 6 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1588444650700-6c1c38885d06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Rose Gold Engagement Ring" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Rose Gold Engagement Ring</h3>
+                        <p class="text-2xl font-bold text-gold-600 mb-4">$1,299.99</p>
+                        <button class="add-to-cart-btn w-full bg-gold-500 text-white py-3 rounded-lg hover:bg-gold-600 transition-all duration-200 hover:scale-105 hover:shadow-lg" data-product-id="16">
+                            <i class="fas fa-cart-plus mr-2"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="modal-content bg-white rounded-xl p-8 m-4 w-full max-w-md transform scale-95 opacity-0 transition-all duration-300">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Login</h2>
+                <button class="close-modal text-gray-400 hover:text-gray-600 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label for="loginEmail" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" id="loginEmail" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-200">
+                    <span class="error-message text-red-500 text-sm hidden"></span>
+                </div>
+                <div>
+                    <label for="loginPassword" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                    <input type="password" id="loginPassword" name="password" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-200">
+                    <span class="error-message text-red-500 text-sm hidden"></span>
+                </div>
+                <button type="submit" class="w-full bg-gold-500 text-white py-3 rounded-lg hover:bg-gold-600 transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="modal-content bg-white rounded-xl p-8 m-4 w-full max-w-md transform scale-95 opacity-0 transition-all duration-300">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Register</h2>
+                <button class="close-modal text-gray-400 hover:text-gray-600 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="registerForm" class="space-y-6">
+                <div>
+                    <label for="registerName" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                    <input type="text" id="registerName" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-200">
+                    <span class="error-message text-red-500 text-sm hidden"></span>
+                </div>
+                <div>
+                    <label for="registerEmail" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" id="registerEmail" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-200">
+                    <span class="error-message text-red-500 text-sm hidden"></span>
+                </div>
+                <div>
+                    <label for="registerPassword" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                    <input type="password" id="registerPassword" name="password" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-200">
+                    <span class="error-message text-red-500 text-sm hidden"></span>
+                </div>
+                <button type="submit" class="w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-gray-900 transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center mb-4">
+                <i class="fas fa-gem text-gold-500 text-2xl mr-2"></i>
+                <span class="text-xl font-bold">Gold Shop</span>
+            </div>
+            <p class="text-gray-300">&copy; Gold Shop. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="static/js/main.js"></script>
+</body>
+</html>
